@@ -86,6 +86,10 @@ public class Expression {
 
     private static String convertToRomanNumerical(int number) {
         String string = "";
+        if(number < 0){
+            string = string + "-";
+            number = Math.abs(number);
+        }
         if (number == 0) {
             return "0";         //так как в римских цифрах 0 не было, то для данной задачи заменим его арабским.
         }
